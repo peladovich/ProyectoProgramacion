@@ -35,6 +35,7 @@ public class Ingreso extends javax.swing.JFrame {
         btnAdmin = new javax.swing.JButton();
         btnRegistrarAdmin = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -76,8 +77,11 @@ public class Ingreso extends javax.swing.JFrame {
         });
         getContentPane().add(btnRegistrarAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 160, 60));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\TIKTOK-RIZZ-ARMY-7-23-2025 2.png")); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 270, -1));
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Untitled\\TIKTOK-RIZZ-ARMY-7-23-2025 2 (1).png")); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 560, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\image 4.png")); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 380, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Utility Panel (1) (1).png")); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 740, 480));
@@ -144,5 +148,6 @@ public class Ingreso extends javax.swing.JFrame {
     private javax.swing.JButton btnRegistrarAdmin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

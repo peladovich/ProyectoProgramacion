@@ -35,6 +35,7 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtCedulaDocente = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
@@ -47,21 +48,25 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
         btnGuardarInasistencia = new javax.swing.JButton();
         spnHasta = new javax.swing.JSpinner();
         spnDesde = new javax.swing.JSpinner();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel1.setText("Docente:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 20, 89, -1));
-
-        txtCedulaDocente.setText("CedulaDocente");
-        getContentPane().add(txtCedulaDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 42, 109, -1));
-
-        txtNombre.setText("Nombre");
-        getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 70, 71, -1));
-
-        txtApellido.setText("Apellido");
-        getContentPane().add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 98, 71, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 89, -1));
+        jPanel1.add(txtCedulaDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 130, -1));
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 130, -1));
+        jPanel1.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 130, -1));
 
         btnGuardarDocente.setText("Guardar");
         btnGuardarDocente.addActionListener(new java.awt.event.ActionListener() {
@@ -69,16 +74,16 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
                 btnGuardarDocenteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardarDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 181, -1, -1));
+        jPanel1.add(btnGuardarDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 160, -1));
 
-        jLabel2.setText("Inasistencia");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 20, 89, -1));
+        jLabel2.setText("Inasistencia:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 89, -1));
 
         jLabel3.setText("Desde:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 45, 59, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, 59, -1));
 
         jLabel4.setText("Hasta");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 73, 59, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 59, -1));
 
         btnVolver.setText("Volver");
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +91,7 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
                 btnVolverActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 304, -1, -1));
+        jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
 
         btnGuardarInasistencia.setText("Guardar");
         btnGuardarInasistencia.addActionListener(new java.awt.event.ActionListener() {
@@ -94,13 +99,39 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
                 btnGuardarInasistenciaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardarInasistencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 190, -1, -1));
+        jPanel1.add(btnGuardarInasistencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 360, 160, -1));
 
         spnHasta.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1761835567845L), null, null, java.util.Calendar.DAY_OF_MONTH));
-        getContentPane().add(spnHasta, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 140, -1));
+        jPanel1.add(spnHasta, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 140, -1));
 
         spnDesde.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1761662640000L), null, null, java.util.Calendar.DAY_OF_MONTH));
-        getContentPane().add(spnDesde, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 140, -1));
+        jPanel1.add(spnDesde, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 140, -1));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\image 4.png")); // NOI18N
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, -1, -1));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Untitled\\Form Contact (1) (1).png")); // NOI18N
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 170, -1));
+
+        jLabel10.setText("Apellido:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
+
+        jLabel8.setText("Cedula Docente:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+
+        jLabel9.setText("Nombre");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Untitled\\Form Contact (1) (1).png")); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 170, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Untitled\\TIKTOK-RIZZ-ARMY-7-23-2025 2 (1).png")); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Utility Panel (1) (1).png")); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 730, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -188,9 +219,18 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
     private javax.swing.JButton btnGuardarInasistencia;
     private javax.swing.JButton btnVolver;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSpinner spnDesde;
     private javax.swing.JSpinner spnHasta;
     private javax.swing.JTextField txtApellido;

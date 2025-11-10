@@ -34,13 +34,23 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         btnGuardar = new javax.swing.JButton();
         txtCedula = new javax.swing.JTextField();
-        txtPass = new javax.swing.JTextField();
         btnVolver = new javax.swing.JButton();
+        txtPass = new javax.swing.JPasswordField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -48,13 +58,10 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
                 btnGuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 141, -1, -1));
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, -1, -1));
 
         txtCedula.setText("Cedula");
-        getContentPane().add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 70, 71, -1));
-
-        txtPass.setText("Password");
-        getContentPane().add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 82, 71, -1));
+        jPanel1.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, 260, -1));
 
         btnVolver.setText("Volver");
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
@@ -62,7 +69,33 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
                 btnVolverActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 170, -1, -1));
+        jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, -1, -1));
+
+        txtPass.setText("jPasswordField1");
+        jPanel1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 260, -1));
+
+        jLabel8.setText("Contrasenia:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, -1, -1));
+
+        jLabel5.setText("Registro Admin:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, -1));
+
+        jLabel6.setText("Cedula: ");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Untitled\\Form Contact (2).png")); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 370, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Untitled\\image 4.png")); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Untitled\\TIKTOK-RIZZ-ARMY-7-23-2025 2 (1).png")); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Utility Panel (1) (1).png")); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 490));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -125,7 +158,15 @@ private void formWindowOpened(java.awt.event.WindowEvent evt) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnVolver;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtCedula;
-    private javax.swing.JTextField txtPass;
+    private javax.swing.JPasswordField txtPass;
     // End of variables declaration//GEN-END:variables
 }

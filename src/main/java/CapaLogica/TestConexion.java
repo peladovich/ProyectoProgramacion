@@ -9,16 +9,16 @@ import java.sql.DriverManager;
 
 public class TestConexion {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/programacion"; // cambia al nombre de tu BD
+        String url = "jdbc:mysql://localhost:3306/programacion"; 
         String user = "root";
         String pass = "";
 
         try {
             Connection con = DriverManager.getConnection(url, user, pass);
-            System.out.println("✅ Conexión exitosa!");
+            System.out.println("Conexión exitosa!");
             con.close();
         } catch (Exception e) {
-            System.out.println("❌ Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }

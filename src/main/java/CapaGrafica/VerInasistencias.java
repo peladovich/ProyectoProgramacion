@@ -31,10 +31,14 @@ public class VerInasistencias extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         btnActualizar = new javax.swing.JButton();
         btnVolver = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -42,6 +46,9 @@ public class VerInasistencias extends javax.swing.JFrame {
                 formWindowOpened(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -56,45 +63,34 @@ public class VerInasistencias extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tabla);
 
-        btnActualizar.setText("jButton1");
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 460, 170));
+
+        btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
 
-        btnVolver.setText("jButton2");
+        btnVolver.setText("Volver");
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverActionPerformed(evt);
             }
         });
+        jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnActualizar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnVolver))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnActualizar)
-                    .addComponent(btnVolver))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Untitled\\TIKTOK-RIZZ-ARMY-7-23-2025 2 (1).png")); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 540, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\image 4.png")); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 390, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\1Figma\\Utility Panel (1) (1).png")); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 720, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 740, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -153,19 +149,20 @@ public class VerInasistencias extends javax.swing.JFrame {
 private void cargarDatos() {
     try (Connection con = CapaPersistencia.Conexion.getConnection();
          PreparedStatement ps = con.prepareStatement(
-             "SELECT i.cedula_docente, d.nombre_docente, d.apellido_docente, i.desde, i.hasta " +
+             "SELECT i.id_inasistencia, i.cedula_docente, d.nombre_docente, d.apellido_docente, i.desde, i.hasta " +
              "FROM inasistencias i " +
              "INNER JOIN docente d ON i.cedula_docente = d.cedula_docente")) {
 
         ResultSet rs = ps.executeQuery();
 
         DefaultTableModel modelo = new DefaultTableModel(
-            new Object[]{"Cédula Docente", "Nombre Docente", "Desde", "Hasta"}, 0
+            new Object[]{"ID Inasistencia", "Cédula Docente", "Nombre Docente", "Desde", "Hasta"}, 0
         );
 
         while (rs.next()) {
             String nombreCompleto = rs.getString("nombre_docente") + " " + rs.getString("apellido_docente");
             modelo.addRow(new Object[]{
+                rs.getInt("id_inasistencia"),
                 rs.getString("cedula_docente"),
                 nombreCompleto,
                 rs.getDate("desde"),
@@ -183,6 +180,10 @@ private void cargarDatos() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizar;
     private javax.swing.JButton btnVolver;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
